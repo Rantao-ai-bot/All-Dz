@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Картка */
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.18);
+}
+
+/* Перша картка */
+
+.hit {
+  grid-column: span 2;
+  position: relative;
+}
+
+.hit::before {
+  content: "Хіт продажів";
+
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  z-index: 5;
+
+  background: crimson;
+  color: white;
+
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Фото */
+
+.product-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  display: block;
+}
+
+/* Оверлей */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,.45);
+
+  opacity: 0;
+
+  transition:
+    opacity 200ms ease-out;
+}
+
+/* Кнопка */
+
+.product-actions {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+
+  transition:
+    opacity 250ms ease-out 200ms;
+}
+
+/* Послідовна анімація */
+
+.product-img:hover .overlay {
+  opacity: 1;
+}
+
+.product-img:hover .product-actions {
+  opacity: 1;
+}
+
+/* Зникнення */
+
+.product-img:not(:hover) .overlay {
+  transition: opacity 200ms ease-in;
+}
+
+.product-img:not(:hover) .product-actions {
+  transition: opacity 150ms ease-in;
+}
+
+/* Кнопка */
+
+.action-btn {
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 20px;
+
+  background: #2196f3;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition:
+    background-color 250ms ease,
+    transform 150ms ease;
+}
+
+.action-btn:hover {
+  background: #1976d2;
+}
+
+.action-btn:active {
+  background: #0d47a1;
+  transform: scale(0.95);
+}
+
+/* Інформація */
+
+.product-info {
+  padding: 18px;
+}
+
+.product-name {
+  margin-bottom: 8px;
+}
+
+.product-price {
+  color: #2196f3;
+  font-weight: 700;
+}
