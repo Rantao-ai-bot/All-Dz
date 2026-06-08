@@ -5,93 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<div class="products">
+  <h2>Завдання A: Візитка</h2>
+  <div class="card">
+    <h3>Ім'я Прізвище</h3>
+    <p>Frontend Developer</p>
+  </div>
 
-  <div class="product-card hit">
-    <div class="product-img">
-      <img src="https://picsum.photos/600/250" alt="Продукт">
+  <h2>Завдання B: Галерея</h2>
+  <div class="gallery">
+    <img class="gallery-item" src="https://picsum.photos/200/140?1" alt="">
+    <img class="gallery-item" src="https://picsum.photos/200/140?2" alt="">
+    <img class="gallery-item" src="https://picsum.photos/200/140?3" alt="">
+  </div>
 
-      <div class="overlay"></div>
-
-      <div class="product-actions">
-        <button class="action-btn">🛒 В кошик</button>
-      </div>
-    </div>
-
-    <div class="product-info">
-      <h3 class="product-name">Назва товару</h3>
-      <p class="product-price">1 200 грн</p>
+  <h2>Завдання C: Портфоліо</h2>
+  <div class="portfolio">
+    <div class="overlay">
+      <h3>Проєкт сайту</h3>
+      <p>Короткий опис проєкту</p>
     </div>
   </div>
 
-  <div class="product-card">
-    <div class="product-img">
-      <img src="https://picsum.photos/300/201" alt="Продукт">
+  <h2>Завдання D: Модалка</h2>
 
-      <div class="overlay"></div>
+  <!-- checkbox hack -->
+  <input type="checkbox" id="modal-toggle">
 
-      <div class="product-actions">
-        <button class="action-btn">🛒 В кошик</button>
+  <label for="modal-toggle" class="open-btn">
+    Переглянути товар
+  </label>
+
+  <div class="modal-backdrop">
+    <div class="modal">
+      <label for="modal-toggle" class="close">✖</label>
+
+      <img src="https://picsum.photos/400/200" alt="">
+
+      <div class="modal-content">
+        <h3>Товар</h3>
+        <p>Ціна: 999 грн</p>
+        <p>Опис товару з характеристиками</p>
+
+        <div class="buy-btn">Додати в кошик</div>
       </div>
-    </div>
-
-    <div class="product-info">
-      <h3 class="product-name">Назва товару</h3>
-      <p class="product-price">950 грн</p>
     </div>
   </div>
 
-  <div class="product-card">
-    <div class="product-img">
-      <img src="https://picsum.photos/300/202" alt="Продукт">
-
-      <div class="overlay"></div>
-
-      <div class="product-actions">
-        <button class="action-btn">🛒 В кошик</button>
-      </div>
-    </div>
-
-    <div class="product-info">
-      <h3 class="product-name">Назва товару</h3>
-      <p class="product-price">1 500 грн</p>
-    </div>
-  </div>
-
-  <div class="product-card">
-    <div class="product-img">
-      <img src="https://picsum.photos/300/203" alt="Продукт">
-
-      <div class="overlay"></div>
-
-      <div class="product-actions">
-        <button class="action-btn">🛒 В кошик</button>
-      </div>
-    </div>
-
-    <div class="product-info">
-      <h3 class="product-name">Назва товару</h3>
-      <p class="product-price">2 100 грн</p>
-    </div>
-  </div>
-
-</div>
-
-</body>
-</html>
 </body>
 </html>
