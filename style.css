@@ -1,164 +1,66 @@
 * {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 40px;
-  background: #f5f6fa;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h2 {
-  margin-top: 50px;
+.container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+  background-color:cornsilk;
 }
 
-/* ================= A. ВІЗИТКА ================= */
-.card {
-  width: 200px;
-  height: 250px;
-  background: white;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 300ms, box-shadow 300ms;
+.box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+
+    animation: move 4s linear infinite;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
+@keyframes move {
 
-/* ================= B. ГАЛЕРЕЯ ================= */
-.gallery {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 40px;
-}
+    /* Верхній лівий */
+    0% {
+        left: 0;
+        top: 0;
+        background: red;
+    }
 
-.gallery-item {
-  width: 200px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: 300ms;
-}
+    /* Верхній правий */
+    25% {
+        left: calc(100% - 100px);
+        top: 0;
+        background: yellow;
+    }
 
-.gallery:hover .gallery-item:not(:hover) {
-  filter: brightness(0.7);
-}
+    /* Нижній правий */
+    50% {
+        left: calc(100% - 100px);
+        top: calc(100% - 100px);
+        background: lime;
+    }
 
-.gallery-item:hover {
-  transform: scale(1.1) rotate(3deg);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
+    /* Нижній лівий */
+    75% {
+        left: 0;
+        top: calc(100% - 100px);
+        background: blue;
+    }
 
-/* ================= C. ПОРТФОЛІО ================= */
-.portfolio {
-  width: 350px;
-  height: 250px;
-  background-image: url("https://picsum.photos/600/400");
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
-  padding: 20px;
-  transition: 400ms;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-}
-
-.portfolio:hover .overlay {
-  left: 0;
-}
-
-/* ================= D. МОДАЛКА (без JS) ================= */
-
-#modal-toggle {
-  display: none;
-}
-
-.open-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 15px;
-  background: #ffcc00;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 0;
-  visibility: hidden;
-  transition: 300ms;
-}
-
-#modal-toggle:checked ~ .modal-backdrop {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal {
-  width: 400px;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-
-  transform: translateY(-100px);
-  transition: 300ms;
-  position: relative;
-}
-
-#modal-toggle:checked ~ .modal-backdrop .modal {
-  transform: translateY(0);
-}
-
-.modal img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.modal-content {
-  padding: 15px;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.buy-btn {
-  margin-top: 10px;
-  padding: 10px;
-  background: #2ecc71;
-  color: white;
-  text-align: center;
-  border-radius: 6px;
-  cursor: pointer;
+    /* Повернення */
+    100% {
+        left: 0;
+        top: 0;
+        background: red;
+    }
 }
