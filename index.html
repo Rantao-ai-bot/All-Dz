@@ -1,18 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./reset.css">
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-
-  <div class="container">
-    <div class="box"></div>
-</div>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1 class="header__title">RUST</h1>
+      <p class="header__text">Каталог контенту гри</p>
+    </header>
+    <!-- Cards -->
+    <main class="catalog">
+      <div class="cards">
+        <!-- Card 1 -->
+        <article class="card card--recommended">
+          <div class="card__image-wrapper">
+            <img
+              class="card__image"
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/252490/header.jpg"
+              alt="Rust"
+            />
+            <span class="card__badge">Новинка</span>
+          </div>
+          <div class="card__content">
+            <p class="card__category">Гра</p>
+            <h2 class="card__title">Rust</h2>
+            <p class="card__description">
+              Виживай у небезпечному світі, збирай ресурси, будуй укриття та
+              захищайся від інших гравців.
+            </p>
+            <p class="card__rating">⭐ 9/10</p>
+            <button class="card__button">Детальніше</button>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card__image-wrapper">
+            <img
+              class="card__image"
+              src="https://th.bing.com/th/id/OIP.7vNjeKvPsfsgKqXYPPDkTwHaDt?w=301&h=174&c=7&r=0&o=7&pid=1.7&rm=3"
+              alt="Rust gameplay"
+            />
+          </div>
+          <div class="card__content">
+            <p class="card__category">Виживання</p>
+            <h2 class="card__title">Rust Survival</h2>
+            <p class="card__description">
+              Досліджуй карту, добувай їжу та ресурси, створюй предмети й
+              розвивай свою базу.
+            </p>
+            <p class="card__rating">⭐ 8.7/10</p>
+            <button class="card__button">Детальніше</button>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card__image-wrapper">
+            <img
+              class="card__image"
+              src="https://th.bing.com/th/id/OIP.ahqyIyT-ZP-9cLzR5gUBYQAAAA?w=264&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
+              alt="Rust base"
+            />
+          </div>
+          <div class="card__content">
+            <p class="card__category">Мультиплеєр</p>
+            <h2 class="card__title">Rust Online</h2>
+            <p class="card__description">
+              Об'єднуйся з друзями, створюй клан та борись за територію на
+              сервері.
+            </p>
+            <p class="card__rating">⭐ 8.5/10</p>
+            <button class="card__button">Детальніше</button>
+          </div>
+        </article>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer"><p>© 2026 Rust Catalog</p></footer>
+  </body>
 </html>

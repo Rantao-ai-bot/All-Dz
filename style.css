@@ -1,66 +1,218 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1b1b1b;
+  color: #fff;
 }
 
-.container {
-    position: relative;
-    width: 600px;
-    height: 400px;
-  background-color:cornsilk;
+/* ====================
+   Header
+   ==================== */
+
+.header {
+  padding: 40px 20px;
+  text-align: center;
+  background: #252525;
 }
 
-.box {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: red;
-
-    animation: move 4s linear infinite;
+.header__title {
+  margin: 0;
+  font-size: 42px;
+  color: #ce422b;
 }
 
-@keyframes move {
+.header__text {
+  margin: 10px 0 0;
+  color: #aaa;
+}
 
-    /* Верхній лівий */
-    0% {
-        left: 0;
-        top: 0;
-        background: red;
-    }
+/* ====================
+   Каталог
+   ==================== */
 
-    /* Верхній правий */
-    25% {
-        left: calc(100% - 100px);
-        top: 0;
-        background: yellow;
-    }
+.catalog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
 
-    /* Нижній правий */
-    50% {
-        left: calc(100% - 100px);
-        top: calc(100% - 100px);
-        background: lime;
-    }
+/* ====================
+   Картки
+   ==================== */
 
-    /* Нижній лівий */
-    75% {
-        left: 0;
-        top: calc(100% - 100px);
-        background: blue;
-    }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
 
-    /* Повернення */
-    100% {
-        left: 0;
-        top: 0;
-        background: red;
-    }
+.card {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 350px;
+  overflow: hidden;
+
+  background: #292929;
+  border: 2px solid #3b3b3b;
+  border-radius: 12px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover картки */
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Рекомендована картка */
+.card--recommended {
+  border-color: #ce422b;
+}
+
+/* ====================
+   Зображення
+   ==================== */
+
+.card__image-wrapper {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover зображення */
+.card:hover .card__image {
+  transform: scale(1.1);
+}
+
+/* ====================
+   Бейдж
+   ==================== */
+
+.card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  background: #ce422b;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ====================
+   Контент
+   ==================== */
+
+.card__content {
+  padding: 22px;
+}
+
+.card__category {
+  margin: 0 0 8px;
+
+  color: #ce422b;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card__title {
+  margin: 0 0 12px;
+  font-size: 25px;
+}
+
+.card__description {
+  min-height: 72px;
+  margin: 0 0 18px;
+
+  color: #bdbdbd;
+  line-height: 1.5;
+}
+
+.card__rating {
+  margin: 0 0 18px;
+  font-weight: 700;
+}
+
+/* ====================
+   Кнопка
+   ==================== */
+
+.card__button {
+  width: 100%;
+  padding: 12px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #ce422b;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card__button:hover {
+  background: #a83222;
+  transform: translateY(-2px);
+}
+
+/* ====================
+   Footer
+   ==================== */
+
+.footer {
+  padding: 25px;
+  text-align: center;
+
+  background: #252525;
+  color: #888;
+}
+
+/* ====================
+   Мобільна версія
+   ==================== */
+
+@media (max-width: 600px) {
+  .header {
+    padding: 30px 15px;
+  }
+
+  .header__title {
+    font-size: 34px;
+  }
+
+  .catalog {
+    padding: 30px 15px;
+  }
+
+  .cards {
+    gap: 20px;
+  }
+
+  .card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
