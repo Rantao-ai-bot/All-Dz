@@ -1,6 +1,4 @@
-@use "./bace/reset";
-@use "./bace/command";
-@use "./bace/container";
-@use "./section/header";
-@use "./section/cards";
-@use "./section/footer";
+@use "./variables";
+@use "./mixins";
+@use "./placeholders";
+@use "./alert";

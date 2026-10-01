@@ -14,75 +14,28 @@
     <link rel="stylesheet" href="./sass/main.css">
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
-      <h1 class="header__title">RUST</h1>
-      <p class="header__text">Каталог контенту гри</p>
-    </header>
-    <!-- Cards -->
-    <main class="catalog">
-      <div class="cards">
-        <article class="card card--recommended">
-          <div class="card__image-wrapper">
-            <img
-              class="card__image"
-              src="https://cdn.cloudflare.steamstatic.com/steam/apps/252490/header.jpg"
-              alt="Rust"
-            />
-            <span class="card__badge">Новинка</span>
-          </div>
-          <div class="card__content">
-            <p class="card__category">Гра</p>
-            <h2 class="card__title">Rust</h2>
-            <p class="card__description">
-              Виживай у небезпечному світі, збирай ресурси, будуй укриття та
-              захищайся від інших гравців.
-            </p>
-            <p class="card__rating">⭐ 9/10</p>
-            <button class="card__button">Детальніше</button>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__image-wrapper">
-            <img
-              class="card__image"
-              src="https://th.bing.com/th/id/OIP.7vNjeKvPsfsgKqXYPPDkTwHaDt?w=301&h=174&c=7&r=0&o=7&pid=1.7&rm=3"
-              alt="Rust gameplay"
-            />
-          </div>
-          <div class="card__content">
-            <p class="card__category">Виживання</p>
-            <h2 class="card__title">Rust Survival</h2>
-            <p class="card__description">
-              Досліджуй карту, добувай їжу та ресурси, створюй предмети й
-              розвивай свою базу.
-            </p>
-            <p class="card__rating">⭐ 8.7/10</p>
-            <button class="card__button">Детальніше</button>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__image-wrapper">
-            <img
-              class="card__image"
-              src="https://th.bing.com/th/id/OIP.ahqyIyT-ZP-9cLzR5gUBYQAAAA?w=264&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
-              alt="Rust base"
-            />
-          </div>
-          <div class="card__content">
-            <p class="card__category">Мультиплеєр</p>
-            <h2 class="card__title">Rust Online</h2>
-            <p class="card__description">
-              Об'єднуйся з друзями, створюй клан та борись за територію на
-              сервері.
-            </p>
-            <p class="card__rating">⭐ 8.5/10</p>
-            <button class="card__button">Детальніше</button>
-          </div>
-        </article>
-      </div>
-    </main>
-    <!-- Footer -->
-    <footer class="footer"><p>© 2026 Rust Catalog</p></footer>
+    <div class="alert alert--info">
+  <h2 class="alert__title">Інформація</h2>
+  <p class="alert__text">Доступне нове завдання.</p>
+  <button class="alert__close" type="button">&times;</button>
+</div>
+
+<div class="alert alert--success">
+  <h2 class="alert__title">Місію виконано</h2>
+  <p class="alert__text">Ти отримав 250 XP.</p>
+  <button class="alert__close" type="button">&times;</button>
+</div>
+
+<div class="alert alert--warning">
+  <h2 class="alert__title">Попередження</h2>
+  <p class="alert__text">У тебе залишилося мало енергії.</p>
+  <button class="alert__close" type="button">&times;</button>
+</div>
+
+<div class="alert alert--error">
+  <h2 class="alert__title">Помилка</h2>
+  <p class="alert__text">Не вдалося виконати завдання.</p>
+  <button class="alert__close" type="button">&times;</button>
+</div>
   </body>
 </html>

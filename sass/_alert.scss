@@ -1,0 +1,51 @@
+.alert {
+  @extend %alert-base;
+
+  &__title {
+    margin: 0 0 8px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__close {
+    @extend %close-button;
+  }
+
+  &--info {
+    @include alert-theme(
+      $alert-info-bg,
+      $alert-info-color,
+      $alert-info-border
+    );
+  }
+
+  &--success {
+    @include alert-theme(
+      $alert-success-bg,
+      $alert-success-color,
+      $alert-success-border
+    );
+  }
+
+  &--warning {
+    @include alert-theme(
+      $alert-warning-bg,
+      $alert-warning-color,
+      $alert-warning-border
+    );
+  }
+
+  &--error {
+    @include alert-theme(
+      $alert-error-bg,
+      $alert-error-color,
+      $alert-error-border
+    );
+  }
+}
