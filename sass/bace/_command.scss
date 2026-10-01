@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1b1b1b;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.catalog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+
+  @media (max-width: 600px) {
+  .catalog {
+    padding: 30px 15px;
+  }
+}
+}

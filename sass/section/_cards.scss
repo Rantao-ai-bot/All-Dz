@@ -1,56 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #1b1b1b;
-  color: #fff;
-}
-
-/* ====================
-   Header
-   ==================== */
-
-.header {
-  padding: 40px 20px;
-  text-align: center;
-  background: #252525;
-}
-
-.header__title {
-  margin: 0;
-  font-size: 42px;
-  color: #ce422b;
-}
-
-.header__text {
-  margin: 10px 0 0;
-  color: #aaa;
-}
-
-/* ====================
-   Каталог
-   ==================== */
-
-.catalog {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
-}
-
-/* ====================
-   Картки
-   ==================== */
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
 .card {
   position: relative;
   flex: 1 1 300px;
@@ -62,22 +9,22 @@ body {
   border-radius: 12px;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-/* Hover картки */
+  @media (max-width: 600px) {
+   .card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+}
 .card:hover {
   transform: scale(1.04);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Рекомендована картка */
 .card--recommended {
   border-color: #ce422b;
 }
-
-/* ====================
-   Зображення
-   ==================== */
 
 .card__image-wrapper {
   position: relative;
@@ -93,14 +40,9 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Hover зображення */
 .card:hover .card__image {
   transform: scale(1.1);
 }
-
-/* ====================
-   Бейдж
-   ==================== */
 
 .card__badge {
   position: absolute;
@@ -116,10 +58,6 @@ body {
   font-size: 13px;
   font-weight: 700;
 }
-
-/* ====================
-   Контент
-   ==================== */
 
 .card__content {
   padding: 22px;
@@ -152,10 +90,6 @@ body {
   font-weight: 700;
 }
 
-/* ====================
-   Кнопка
-   ==================== */
-
 .card__button {
   width: 100%;
   padding: 12px;
@@ -178,40 +112,8 @@ body {
   transform: translateY(-2px);
 }
 
-/* ====================
-   Footer
-   ==================== */
-
-.footer {
-  padding: 25px;
-  text-align: center;
-
-  background: #252525;
-  color: #888;
-}
-
-/* ====================
-   Мобільна версія
-   ==================== */
-
 @media (max-width: 600px) {
-  .header {
-    padding: 30px 15px;
-  }
-
-  .header__title {
-    font-size: 34px;
-  }
-
-  .catalog {
-    padding: 30px 15px;
-  }
-
-  .cards {
-    gap: 20px;
-  }
-
-  .card {
+   .card {
     flex-basis: 100%;
     max-width: 100%;
   }
