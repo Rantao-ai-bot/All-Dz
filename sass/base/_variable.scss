@@ -1,0 +1,28 @@
+$color-primary: #2563eb;
+$color-primary-dark: #1d4ed8;
+$color-text: #1e293b;
+$color-muted: #64748b;
+$color-background: #f8fafc;
+$color-white: #ffffff;
+$color-border: #e2e8f0;
+$color-popular: #f59e0b;
+
+$font-main: Arial, sans-serif;
+
+$space-base: 8px;
+$space-1: $space-base;
+$space-2: $space-base * 2;
+$space-3: $space-base * 3;
+$space-4: $space-base * 4;
+$space-5: $space-base * 6;
+$space-6: $space-base * 8;
+
+$radius-card: 16px;
+$shadow-card: 0 4px 16px rgb(15 23 42 / 8%);
+$shadow-hover: 0 12px 30px rgb(15 23 42 / 14%);
+
+$bp-mobile: 767px;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
+$container-width: 1200px;

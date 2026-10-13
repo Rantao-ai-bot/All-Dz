@@ -4,31 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style/main.min.css">
 </head>
 <body>
-     <div class="item-card item-card--legendary">
-  <img
-    class="item-card__image"
-    src="https://th.bing.com/th/id/OIP.0q3R1ENmGgiJYx4SHI3UmwHaNK?w=132&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
-    alt="Легендарний меч"
-  />
+   <section class="courses">
+  <div class="courses__container">
+    <header class="courses__header">
+      <div class="courses__heading">
+        <p class="courses__eyebrow">Навчайся та розвивайся</p>
+        <h2 class="courses__title">Наші курси</h2>
+      </div>
 
-  <div class="item-card__content">
-    <h2 class="item-card__title">Меч Вогняного Дракона</h2>
+      <p class="courses__subtitle">
+        Обирай напрям, розвивай навички та відкривай нові можливості.
+      </p>
+    </header>
 
-    <p class="item-card__type">Тип: Меч</p>
+    <div class="courses__grid">
+      <article class="course-card course-card--popular">
+        <img class="course-card__image"
+             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+             alt="Робоче місце веброзробника">
 
-    <p class="item-card__description">
-      Стародавній меч, який був викуваний у полум'ї дракона.
-      Дає власнику силу вогню.
-    </p>
+        <div class="course-card__body">
+          <span class="course-card__badge">Популярний</span>
+          <h3 class="course-card__title">Frontend-розробка</h3>
+          <div class="course-card__meta">
+            <span>Рівень: початковий</span>
+            <span>Тривалість: 4 місяці</span>
+          </div>
+          <p class="course-card__description">
+            Вивчи HTML, CSS і JavaScript та створи свої перші вебсайти.
+          </p>
+          <button class="course-card__button" type="button">
+            Детальніше
+          </button>
+        </div>
+      </article>
 
-    <p class="item-card__rarity">Рідкість: Легендарний</p>
+      <article class="course-card">
+        <img class="course-card__image"
+             src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
+             alt="Програмування на комп'ютері">
 
-    <p class="item-card__price">2500 золота</p>
+        <div class="course-card__body">
+          <h3 class="course-card__title">Python</h3>
+          <div class="course-card__meta">
+            <span>Рівень: початковий</span>
+            <span>Тривалість: 3 місяці</span>
+          </div>
+          <p class="course-card__description">
+            Освой основи програмування, алгоритми та роботу з даними.
+          </p>
+          <button class="course-card__button" type="button">
+            Детальніше
+          </button>
+        </div>
+      </article>
 
-    <button class="item-card__button">Придбати</button>
+      <article class="course-card">
+        <img class="course-card__image"
+             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+             alt="Аналітика даних на екрані">
+
+        <div class="course-card__body">
+          <h3 class="course-card__title">Data Analytics</h3>
+          <div class="course-card__meta">
+            <span>Рівень: середній</span>
+            <span>Тривалість: 5 місяців</span>
+          </div>
+          <p class="course-card__description">
+            Навчися аналізувати дані, будувати графіки та знаходити закономірності.
+          </p>
+          <button class="course-card__button" type="button">
+            Детальніше
+          </button>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <img class="course-card__image"
+             src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80"
+             alt="Дизайн і творчі матеріали">
+
+        <div class="course-card__body">
+          <h3 class="course-card__title">UI/UX Design</h3>
+          <div class="course-card__meta">
+            <span>Рівень: початковий</span>
+            <span>Тривалість: 3 місяці</span>
+          </div>
+          <p class="course-card__description">
+            Створюй зручні інтерфейси, прототипи та сучасні макети.
+          </p>
+          <button class="course-card__button" type="button">
+            Детальніше
+          </button>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <img class="course-card__image"
+             src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+             alt="Командна робота за ноутбуком">
+
+        <div class="course-card__body">
+          <h3 class="course-card__title">Digital Marketing</h3>
+          <div class="course-card__meta">
+            <span>Рівень: початковий</span>
+            <span>Тривалість: 2 місяці</span>
+          </div>
+          <p class="course-card__description">
+            Дізнайся, як просувати бренди, працювати із соцмережами та рекламою.
+          </p>
+          <button class="course-card__button" type="button">
+            Детальніше
+          </button>
+        </div>
+      </article>
+
+      <article class="course-card">
+        <img class="course-card__image"
+             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+             alt="Команда працює над цифровим проєктом">
+
+        <div class="course-card__body">
+          <h3 class="course-card__title">Project Management</h3>
+          <div class="course-card__meta">
+            <span>Рівень: середній</span>
+            <span>Тривалість: 4 місяці</span>
+          </div>
+          <p class="course-card__description">
+            Навчися планувати завдання, керувати командою та запускати проєкти.
+          </p>
+          <button class="course-card__button" type="button">
+            Детальніше
+          </button>
+        </div>
+      </article>
+    </div>
   </div>
-</div>
+</section>
 </body>
 </html>
