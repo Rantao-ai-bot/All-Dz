@@ -1,148 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style/main.min.css">
-</head>
-<body>
-   <section class="courses">
-  <div class="courses__container">
-    <header class="courses__header">
-      <div class="courses__heading">
-        <p class="courses__eyebrow">Навчайся та розвивайся</p>
-        <h2 class="courses__title">Наші курси</h2>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+  </head>
+  <body>
+    <header class="bg-secondary">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+          <div class="container-fluid">
+            <a class="navbar-brand text-info" href="#">WebStudio</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-white "
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Disabled</a
+                  >
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-warning text-info" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
       </div>
-
-      <p class="courses__subtitle">
-        Обирай напрям, розвивай навички та відкривай нові можливості.
-      </p>
     </header>
-
-    <div class="courses__grid">
-      <article class="course-card course-card--popular">
-        <img class="course-card__image"
-             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-             alt="Робоче місце веброзробника">
-
-        <div class="course-card__body">
-          <span class="course-card__badge">Популярний</span>
-          <h3 class="course-card__title">Frontend-розробка</h3>
-          <div class="course-card__meta">
-            <span>Рівень: початковий</span>
-            <span>Тривалість: 4 місяці</span>
-          </div>
-          <p class="course-card__description">
-            Вивчи HTML, CSS і JavaScript та створи свої перші вебсайти.
-          </p>
-          <button class="course-card__button" type="button">
-            Детальніше
+    <main>
+      <section class="py-5 bg-secondary">
+        <div class="container">
+          <h1 class="text-center fs-1 lh-lg text-uppercase text-success mb-3">
+            заголовок сайту
+          </h1>
+          <button type="button" class="btn btn-primary mx-auto d-block px-5 py-2">
+            Переглянути
           </button>
         </div>
-      </article>
-
-      <article class="course-card">
-        <img class="course-card__image"
-             src="https://1.bp.blogspot.com/-Nq9lcDm_OMA/X-wP3ZSh9nI/AAAAAAAAAe8/RuWNO1RdKXAHEPurWLgVfQnjzmgxsWpoACLcBGAsYHQ/s1920/python_code.png"
-             alt="Програмування на комп'ютері">
-
-        <div class="course-card__body">
-          <h3 class="course-card__title">Python</h3>
-          <div class="course-card__meta">
-            <span>Рівень: початковий</span>
-            <span>Тривалість: 3 місяці</span>
-          </div>
-          <p class="course-card__description">
-            Освой основи програмування, алгоритми та роботу з даними.
-          </p>
-          <button class="course-card__button" type="button">
-            Детальніше
-          </button>
+      </section>
+      <section class="py-5">
+        <div class="container">
+          <ul class="d-flex justify-content-around flex-wrap gap-3">
+            <li>
+              <div class="card" style="width: 18rem">
+                <img src="https://th.bing.com/th/id/R.a7f5a8daca74a3c8917802c86be09080?rik=M7WSMUSgRVh7Ew&pid=ImgRaw&r=0" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text mb-2">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card" style="width: 18rem">
+                <img src="https://th.bing.com/th/id/R.a7f5a8daca74a3c8917802c86be09080?rik=M7WSMUSgRVh7Ew&pid=ImgRaw&r=0" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text mb-2">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card" style="width: 18rem">
+                <img src="https://th.bing.com/th/id/R.a7f5a8daca74a3c8917802c86be09080?rik=M7WSMUSgRVh7Ew&pid=ImgRaw&r=0" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text mb-2">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </li>
+             <li>
+              <div class="card" style="width: 18rem">
+                <img src="https://th.bing.com/th/id/R.a7f5a8daca74a3c8917802c86be09080?rik=M7WSMUSgRVh7Ew&pid=ImgRaw&r=0" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text mb-2">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-      </article>
-
-      <article class="course-card">
-        <img class="course-card__image"
-             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-             alt="Аналітика даних на екрані">
-
-        <div class="course-card__body">
-          <h3 class="course-card__title">Data Analytics</h3>
-          <div class="course-card__meta">
-            <span>Рівень: середній</span>
-            <span>Тривалість: 5 місяців</span>
-          </div>
-          <p class="course-card__description">
-            Навчися аналізувати дані, будувати графіки та знаходити закономірності.
-          </p>
-          <button class="course-card__button" type="button">
-            Детальніше
-          </button>
-        </div>
-      </article>
-
-      <article class="course-card">
-        <img class="course-card__image"
-             src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80"
-             alt="Дизайн і творчі матеріали">
-
-        <div class="course-card__body">
-          <h3 class="course-card__title">UI/UX Design</h3>
-          <div class="course-card__meta">
-            <span>Рівень: початковий</span>
-            <span>Тривалість: 3 місяці</span>
-          </div>
-          <p class="course-card__description">
-            Створюй зручні інтерфейси, прототипи та сучасні макети.
-          </p>
-          <button class="course-card__button" type="button">
-            Детальніше
-          </button>
-        </div>
-      </article>
-
-      <article class="course-card">
-        <img class="course-card__image"
-             src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-             alt="Командна робота за ноутбуком">
-
-        <div class="course-card__body">
-          <h3 class="course-card__title">Digital Marketing</h3>
-          <div class="course-card__meta">
-            <span>Рівень: початковий</span>
-            <span>Тривалість: 2 місяці</span>
-          </div>
-          <p class="course-card__description">
-            Дізнайся, як просувати бренди, працювати із соцмережами та рекламою.
-          </p>
-          <button class="course-card__button" type="button">
-            Детальніше
-          </button>
-        </div>
-      </article>
-
-      <article class="course-card">
-        <img class="course-card__image"
-             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
-             alt="Команда працює над цифровим проєктом">
-
-        <div class="course-card__body">
-          <h3 class="course-card__title">Project Management</h3>
-          <div class="course-card__meta">
-            <span>Рівень: середній</span>
-            <span>Тривалість: 4 місяці</span>
-          </div>
-          <p class="course-card__description">
-            Навчися планувати завдання, керувати командою та запускати проєкти.
-          </p>
-          <button class="course-card__button" type="button">
-            Детальніше
-          </button>
-        </div>
-      </article>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://bipbap.ru/wp-content/uploads/2017/04/2-5.jpg" class="d-block w-100 height: 500px" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/originals/5b/1a/48/5b1a4800d812af047443ee9b6faa2c04.jpg" class="d-block w-100 height: 500px" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/originals/b6/fc/05/b6fc0514cabfa0f434278903084c594c.jpg" class="d-block w-100 height: 500px" alt="...">
     </div>
   </div>
-</section>
-</body>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 </html>
